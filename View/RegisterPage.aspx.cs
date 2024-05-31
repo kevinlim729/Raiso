@@ -31,7 +31,10 @@ namespace Raiso.View
                 if (dob > DateTime.Now.AddYears(-age)) age--;
             }
             return (age >= 1) ? true : false;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e7780fb3af06394fbdbb22dd9f1493b6ce452efe
         }
 
 
