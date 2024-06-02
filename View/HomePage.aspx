@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+
+<link rel="stylesheet" href="./Style/Style.css" />
+<link rel="stylesheet" href="./Style/Home.css" />
+
 <head runat="server">
     <title>Home Page</title>
 </head>
