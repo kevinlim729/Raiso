@@ -1,11 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="RegisterPage.aspx.cs" Inherits="Raiso.View.RegisterPage" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
 
 <link rel="stylesheet" href="./Style/Style.css" />
-<link rel="stylesheet" href="./Style/Register.css" />
+<link rel="stylesheet" href="./Style/LoginRegister.css" />
 
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Register</title>
 </head>

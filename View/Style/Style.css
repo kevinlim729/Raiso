@@ -1,3 +1,8 @@
 ﻿body {
-    background-color:darkslateblue
+    background-color:black
+}
+
+h2{
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }

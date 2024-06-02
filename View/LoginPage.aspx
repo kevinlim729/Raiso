@@ -2,11 +2,10 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-
 <link rel="stylesheet" href="./Style/Style.css" />
-<link rel="stylesheet" href="./Style/Login.css" />
+<link rel="stylesheet" href="./Style/LoginRegister.css" />
 
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login Page</title>
 </head>
@@ -25,7 +24,7 @@
             <br />
             <asp:CheckBox ID="chkRememberMe" runat="server" Text="Remember Me" />
             <br />
-            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+            <asp:Button ID="btnLogin" Class="Button" runat="server" Text="Login" OnClick="btnLogin_Click" />
         </div>
     </form>
 </body>
