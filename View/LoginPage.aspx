@@ -2,16 +2,15 @@
 
 <!DOCTYPE html>
 
-<link rel="stylesheet" href="./Style/Style.css" />
-<link rel="stylesheet" href="./Style/LoginRegister.css" />
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login Page</title>
+    <link rel="stylesheet" href="./Style/Style.css" />
+    <link rel="stylesheet" href="./Style/LoginRegister.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="Login-Card Center">
             <h2>Login</h2>
             <asp:TextBox ID="txtUsername" runat="server" placeholder="Username"></asp:TextBox>
             <br />
@@ -24,7 +23,7 @@
             <br />
             <asp:CheckBox ID="chkRememberMe" runat="server" Text="Remember Me" />
             <br />
-            <asp:Button ID="btnLogin" Class="Button" runat="server" Text="Login" OnClick="btnLogin_Click" />
+            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
         </div>
     </form>
 </body>
