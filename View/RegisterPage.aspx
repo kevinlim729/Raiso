@@ -6,7 +6,6 @@
 <head runat="server">
     <title>Register</title>
     <link rel="stylesheet" href="./Style/Style.css" />
-    <link rel="stylesheet" href="./Style/LoginRegister.css" />
 </head>
 <body>
     <form id="form1" runat="server">
