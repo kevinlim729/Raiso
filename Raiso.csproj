@@ -92,8 +92,6 @@
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\LoginPage.aspx" />
     <Content Include="View\RegisterPage.aspx" />
-    <Content Include="View\Style\Home.css" />
-    <Content Include="View\Style\LoginResgister.css" />
     <Content Include="View\Style\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>

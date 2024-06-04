@@ -9,13 +9,3 @@ h2{
     color: white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.Login-Card {
-    color:dimgray;
-}
-
-.Center {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-}
