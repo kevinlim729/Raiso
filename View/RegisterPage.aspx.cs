@@ -41,11 +41,7 @@ namespace Raiso.View
                 age = DateTime.Now.Year - dob.Year;
                 if (dob > DateTime.Now.AddYears(-age)) age--;
             }
-<<<<<<< HEAD
-            return (age >= 1);
-=======
             return (age >= 1) ? true : false;
->>>>>>> 7080f6a7945c967aff51a0a68cd82d057504f6b5
         }
 
         protected void RegisterButton_Click(object sender, EventArgs e)
