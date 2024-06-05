@@ -26,23 +26,27 @@ namespace Raiso.View
 
             if (isAuthenticated)
             {
-                HttpCookie cookie = new HttpCookie("UserInfo");
-                cookie["Username"] = username;
+                HttpCookie cookie;
 
                 bool isAdmin = checkAdmin(username);
+                string pageRedirect = "~/";
 
                 if (isAdmin)
                 {
-                    cookie.Expires = DateTime.Now.AddHours(6);
+                    cookie = new HttpCookie("admin");
+                    pageRedirect += "Admin/AdminPage.aspx";
                 }
                 else
                 {
-                    cookie.Expires = DateTime.Now.AddHours(12);
+                    cookie = new HttpCookie("customer");
+                    pageRedirect += "Customer/CustomerPage.aspx";
                 }
 
+                cookie.Expires = DateTime.Now.AddHours(12);
+                cookie["Username"] = username;
                 Response.Cookies.Add(cookie);
 
-                Response.Redirect("HomePage.aspx");
+                Response.Redirect(pageRedirect);
             }
             else
             {

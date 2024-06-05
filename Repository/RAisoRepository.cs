@@ -9,14 +9,15 @@ namespace Raiso.Repository
 {
     public class RAisoRepository
     {
+        //RAiso_Database_Entities db = new RAiso_Database_Entities();
         RAiso_Database_Entities db = new RAiso_Database_Entities();
 
         public int generateUserID()
         {
-            int lastID = (from a in db.MsUsers select a.UserID).ToList().LastOrDefault();
-            
-            return (lastID == 0) ? 1 : lastID++;
+            int lastID = db.MsUsers.Select(u => u.UserID).DefaultIfEmpty(0).Max();
+            return lastID + 1;
         }
+
 
         public int getUserIDByUsername(string username)
         {

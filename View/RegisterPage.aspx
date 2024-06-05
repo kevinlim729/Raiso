@@ -18,10 +18,10 @@
             <asp:ValidationSummary ID="ValidationSummary" runat="server" ForeColor="Red" />
 
             <div>
-                <label for="Name">Name:</label>
+                <label for="txtUserame">Name:</label>
                 <asp:TextBox ID="txtUserame" runat="server" MaxLength="50" />
-                <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="Name" ErrorMessage="Name is required." Display="Dynamic" />
-                <asp:RegularExpressionValidator ID="NameLengthValidator" runat="server" ControlToValidate="Name" ValidationExpression="^.{5,50}$" ErrorMessage="Name must be between 5 and 50 characters." Display="Dynamic" />
+                <asp:RequiredFieldValidator ID="NameRequired" runat="server" ControlToValidate="txtUserame" ErrorMessage="Name is required." Display="Dynamic" />
+                <asp:RegularExpressionValidator ID="NameLengthValidator" runat="server" ControlToValidate="txtUserame" ValidationExpression="^.{5,50}$" ErrorMessage="Name must be between 5 and 50 characters." Display="Dynamic" />
             </div>
 
             <div>
@@ -37,26 +37,26 @@
                     <asp:ListItem Text="Male" Value="Male" />
                     <asp:ListItem Text="Female" Value="Female" />
                 </asp:RadioButtonList>
-                <asp:RequiredFieldValidator ID="GenderRequired" runat="server" ControlToValidate="Gender" InitialValue="" ErrorMessage="Gender is required." Display="Dynamic" />
+                <asp:RequiredFieldValidator ID="GenderRequired" runat="server" ControlToValidate="radiobtnGender" InitialValue="" ErrorMessage="Gender is required." Display="Dynamic" />
             </div>
 
             <div>
                 <label for="Address">Address:</label>
                 <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" />
-                <asp:RequiredFieldValidator ID="AddressRequired" runat="server" ControlToValidate="Address" ErrorMessage="Address is required." Display="Dynamic" />
+                <asp:RequiredFieldValidator ID="AddressRequired" runat="server" ControlToValidate="txtAddress" ErrorMessage="Address is required." Display="Dynamic" />
             </div>
 
             <div>
                 <label for="Password">Password:</label>
                 <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
-                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." Display="Dynamic" />
-                <asp:RegularExpressionValidator ID="PasswordValidator" runat="server" ControlToValidate="Password" ValidationExpression="^[a-zA-Z0-9]+$" ErrorMessage="Password must be alphanumeric." Display="Dynamic" />
+                <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required." Display="Dynamic" />
+                <asp:RegularExpressionValidator ID="PasswordValidator" runat="server" ControlToValidate="txtPassword" ValidationExpression="^[a-zA-Z0-9]+$" ErrorMessage="Password must be alphanumeric." Display="Dynamic" />
             </div>
 
             <div>
                 <label for="Phone">Phone:</label>
                 <asp:TextBox ID="txtPhone" runat="server" />
-                <asp:RequiredFieldValidator ID="PhoneRequired" runat="server" ControlToValidate="Phone" ErrorMessage="Phone number is required." Display="Dynamic" />
+                <asp:RequiredFieldValidator ID="PhoneRequired" runat="server" ControlToValidate="txtPhone" ErrorMessage="Phone number is required." Display="Dynamic" />
             </div>
 
             <div>

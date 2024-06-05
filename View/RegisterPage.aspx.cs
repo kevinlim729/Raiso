@@ -20,6 +20,17 @@ namespace Raiso.View
                 Response.Redirect("HomePage.aspx");
             }
         }
+        protected void ValidateDOB(object source, ServerValidateEventArgs args)
+        {
+            DateTime dob;
+            int age = -1;
+            if (DateTime.TryParse(args.Value, out dob))
+            {
+                age = DateTime.Now.Year - dob.Year;
+                if (dob > DateTime.Now.AddYears(-age)) age--;
+            }
+            args.IsValid = (age >= 1);
+        }
 
         private bool ValidateDOB(string dobInput)
         {
@@ -30,24 +41,25 @@ namespace Raiso.View
                 age = DateTime.Now.Year - dob.Year;
                 if (dob > DateTime.Now.AddYears(-age)) age--;
             }
+<<<<<<< HEAD
+            return (age >= 1);
+=======
             return (age >= 1) ? true : false;
+>>>>>>> 7080f6a7945c967aff51a0a68cd82d057504f6b5
         }
 
-
-
-        protected void RegisterButton_Click(object sender , EventArgs e)
+        protected void RegisterButton_Click(object sender, EventArgs e)
         {
             string username = txtUserame.Text;
             string password = txtPassword.Text;
-            string dobInput = DOBValidator.Text;
+            string dobInput = DOB.Text;
             DateTime dob;
             string gender = radiobtnGender.SelectedValue;
             string address = txtAddress.Text;
 
-
             if (!ValidateDOB(dobInput))
             {
-                ErrorMessage.Text = "You must be at least 1 (one) years old!";
+                ErrorMessage.Text = "You must be at least 1 year old!";
                 return;
             }
             if (!DateTime.TryParse(dobInput, out dob))

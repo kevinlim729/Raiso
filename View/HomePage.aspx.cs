@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Raiso.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,56 +11,49 @@ namespace Raiso.View
 {
     public partial class HomePage : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-            GenerateNavBar();
-        }
+        
 
         private void GenerateNavBar()
         {
-            bool isLoggedIn = IsUserLoggedIn();
-            string userRole = GetUserRole();
+            string isLoggedIn = IsUserLoggedIn();
 
             string navBarHtml = "<ul>";
 
-            // navBarHtml += "<li><a href='HomePage.aspx'>Home</a></li>";
-
-            if (!isLoggedIn)
-            {
-                navBarHtml += "<li><a href='LoginPage.aspx'>Login</a></li>";
-                navBarHtml += "<li><a href='RegisterPage.aspx'>Register</a></li>";
-            }
-            else
-            {
-                if (userRole == "customer")
-                {
-                    navBarHtml += "<li><a href='Cart.aspx'>Cart</a></li>";
-                    navBarHtml += "<li><a href='Transaction.aspx'>Transaction</a></li>";
-                    navBarHtml += "<li><a href='UpdateProfile.aspx'>Update Profile</a></li>";
-                }
-                else if (userRole == "admin")
-                {
-                    navBarHtml += "<li><a href='TransactionReport.aspx'>Transaction</a></li>";
-                    navBarHtml += "<li><a href='UpdateProfile.aspx'>Update Profile</a></li>";
-                }
-                navBarHtml += "<li><a href='Logout.aspx'>Logout</a></li>";
-            }
-
+            navBarHtml += "<li><a href='HomePage.aspx'>Home</a></li>";
+            navBarHtml += "<li><a href='LoginPage.aspx'>Login</a></li>";
+            navBarHtml += "<li><a href='RegisterPage.aspx'>Register</a></li>";
             navBarHtml += "</ul>";
 
             NavBarPlaceHolder.Controls.Add(new Literal { Text = navBarHtml });
         }
 
-        private bool IsUserLoggedIn()
+
+
+
+        private string IsUserLoggedIn()
         {
-            // Replace with your actual logic to check if the user is logged in
-            return HttpContext.Current.Session["UserLoggedIn"] != null;
+            // Check if the cookie exists
+            HttpCookie userRoleCookie = HttpContext.Current.Request.Cookies["UserRoleCookie"];
+
+            // If the cookie does not exist, return "none"
+            if (userRoleCookie == null)
+            {
+                return "none";
+            }
+
+            // Read the value of the "Role" from the cookie
+            string userRole = userRoleCookie["Role"];
+
+            // Return the user role if it is "admin" or "customer", otherwise return "none"
+            if (userRole == "admin" || userRole == "customer")
+            {
+                return userRole;
+            }
+
+            return "none";
         }
 
-        private string GetUserRole()
-        {
-            // Replace with your actual logic to get the user's role
-            return HttpContext.Current.Session["UserRole"] as string;
-        }
+
+
     }
 }
