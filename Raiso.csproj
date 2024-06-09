@@ -90,6 +90,7 @@
       <LastGenOutput>RAisoDatabaseEntity.cs</LastGenOutput>
     </Content>
     <Content Include="View\AdminPage.aspx" />
+    <Content Include="View\Asset\logo.png" />
     <Content Include="View\CustomerPage.aspx" />
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\LoginPage.aspx" />
@@ -185,10 +186,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\Admin\" />
-    <Folder Include="View\Customer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>

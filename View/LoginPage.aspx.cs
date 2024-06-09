@@ -17,6 +17,11 @@ namespace Raiso.View
 
         }
 
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegisterPage.aspx");
+        }
+
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
@@ -34,12 +39,12 @@ namespace Raiso.View
                 if (isAdmin)
                 {
                     cookie = new HttpCookie("admin");
-                    pageRedirect += "AdminPage.aspx";
+                    pageRedirect += "View/AdminPage.aspx";
                 }
                 else
                 {
                     cookie = new HttpCookie("customer");
-                    pageRedirect += "CustomerPage.aspx";
+                    pageRedirect += "View/CustomerPage.aspx";
                 }
 
                 cookie.Expires = DateTime.Now.AddHours(12);
@@ -69,9 +74,5 @@ namespace Raiso.View
 
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("RegisterPage.aspx");
-        }
     }
 }
