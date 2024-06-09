@@ -26,6 +26,11 @@
             <asp:CheckBox ID="chkRememberMe" Class="text-light" runat="server" Text="Remember Me" />
             <br />
             <br />
+
+            <asp:LinkButton ID="LinkButton1" class="text-warning" runat="server" OnClick="LinkButton1_Click"
+                >Dont Have Account?</asp:LinkButton>
+            <br />
+         
             <asp:Button ID="btnLogin" Class="btn btn-primary btn-lg" runat="server" Text="Login" OnClick="btnLogin_Click" />
             <br />
             <br />

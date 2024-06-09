@@ -10,8 +10,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h2>Register</h2>
+        <div class="container bg-secondary">
+            <h2 class="text-light">Register</h2>
             <asp:Label ID="ErrorMessage" runat="server" ForeColor="Red" />
             <asp:ValidationSummary ID="ValidationSummary" runat="server" ForeColor="Red" />
 
@@ -58,7 +58,8 @@
             </div>
 
             <div>
-                <asp:Button ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click" />
+
+                <asp:Button ID="RegisterButton" Class="btn btn-primary btn-lg" runat="server" Text="Register" OnClick="RegisterButton_Click" />
             </div>
         </div>
     </form>

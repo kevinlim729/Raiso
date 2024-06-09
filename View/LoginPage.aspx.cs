@@ -34,12 +34,12 @@ namespace Raiso.View
                 if (isAdmin)
                 {
                     cookie = new HttpCookie("admin");
-                    pageRedirect += "Admin/AdminPage.aspx";
+                    pageRedirect += "AdminPage.aspx";
                 }
                 else
                 {
                     cookie = new HttpCookie("customer");
-                    pageRedirect += "Customer/CustomerPage.aspx";
+                    pageRedirect += "CustomerPage.aspx";
                 }
 
                 cookie.Expires = DateTime.Now.AddHours(12);
@@ -69,5 +69,9 @@ namespace Raiso.View
 
         }
 
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("RegisterPage.aspx");
+        }
     }
 }
