@@ -10,20 +10,25 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="container bg-secondary">
-            <h2>Login</h2>
-            <asp:TextBox ID="txtUsername" Class="bg-dark" runat="server" placeholder="Username"></asp:TextBox>
+        <div class="container gap-3 bg-secondary">
+            <h2 class="text-light">Login</h2>
+            <asp:TextBox ID="txtUsername" Class="" runat="server" placeholder="Username"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ControlToValidate="txtUsername" ErrorMessage="Username is required." Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:Label ID="lblErrorMessage" runat="server" ForeColor="Red" Visible="false"></asp:Label>
             <br />
-            <asp:TextBox ID="txtPassword" Class="bg-dark" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
+
+            <asp:TextBox ID="txtPassword" Class="" runat="server" TextMode="Password" placeholder="Password"></asp:TextBox>
             <br />
             <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ControlToValidate="txtPassword" ErrorMessage="Password is required." Display="Dynamic" ForeColor="Red"></asp:RequiredFieldValidator>
             <br />
+
             <asp:CheckBox ID="chkRememberMe" Class="text-light" runat="server" Text="Remember Me" />
             <br />
+            <br />
             <asp:Button ID="btnLogin" Class="btn btn-primary btn-lg" runat="server" Text="Login" OnClick="btnLogin_Click" />
+            <br />
+            <br />
         </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
