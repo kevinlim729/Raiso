@@ -27,9 +27,6 @@ namespace Raiso.View
             NavBarPlaceHolder.Controls.Add(new Literal { Text = navBarHtml });
         }
 
-
-
-
         private string IsUserLoggedIn()
         {
             // Check if the cookie exists
