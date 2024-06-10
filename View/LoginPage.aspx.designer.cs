@@ -78,13 +78,13 @@ namespace Raiso.View
         protected global::System.Web.UI.WebControls.CheckBox chkRememberMe;
 
         /// <summary>
-        /// LinkButton1 control.
+        /// HyperLink1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
 
         /// <summary>
         /// btnLogin control.

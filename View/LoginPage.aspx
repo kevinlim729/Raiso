@@ -26,8 +26,8 @@
             <asp:CheckBox ID="chkRememberMe" Class="text-light" runat="server" Text="Remember Me" />
             <br />
 
-            <asp:LinkButton ID="LinkButton1" class="text-warning" runat="server" OnClick="LinkButton1_Click"
-                >Dont Have Account?</asp:LinkButton>
+            <asp:HyperLink ID="HyperLink1" class="text-warning" runat="server" NavigateUrl="RegisterPage.aspx"
+                >Don't Have Account?</asp:HyperLink>
             <br />
          
             <asp:Button ID="btnLogin" Class="btn btn-primary btn-lg" runat="server" Text="Login" OnClick="btnLogin_Click" />

@@ -17,11 +17,6 @@ namespace Raiso.View
 
         }
 
-        protected void LinkButton1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("RegisterPage.aspx");
-        }
-
         protected void btnLogin_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text;
