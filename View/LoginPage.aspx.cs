@@ -35,13 +35,13 @@ namespace Raiso.View
                 {
                     userRoleCookie = new HttpCookie("UserRoleCookie");
                     userRoleCookie["Role"] = "admin";
-                    pageRedirect += "Admin/AdminPage.aspx";
+                    pageRedirect += "./Admin/AdminPage.aspx";
                 }
                 else
                 {
                     userRoleCookie = new HttpCookie("UserRoleCookie");
                     userRoleCookie["Role"] = "customer";
-                    pageRedirect += "Customer/CustomerPage.aspx";
+                    pageRedirect += "./Customer/CustomerPage.aspx";
                 }
 
                 userRoleCookie.Expires = DateTime.Now.AddHours(12);

@@ -38,6 +38,10 @@ namespace Raiso.View
             else if(cookie == "admin")
             {
                 Response.Redirect(cookie);
+                string navBarHtml = "<ul class=\"list-group list-group-horizontal\">";
+                navBarHtml += "<li class=\"list-group-item bg-dark\"><a class=\"text-light\" href='HomePage.aspx'>Home</a></li>";
+                navBarHtml += "<li class=\"list-group-item bg-dark\"><asp:Button ID=\"Logout-btn\" Class=\"btn bg-error\" OnClick=\"\" runat=\"server\" Text=\"Log Out\" /></li>";
+                navBarHtml += "</ul>";
             }
         }
 
