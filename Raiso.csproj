@@ -89,13 +89,11 @@
       <DependentUpon>RAisoDatabaseEntity.edmx</DependentUpon>
       <LastGenOutput>RAisoDatabaseEntity.cs</LastGenOutput>
     </Content>
-    <Content Include="View\AdminPage.aspx" />
-    <Content Include="View\Asset\logo.png" />
-    <Content Include="View\CustomerPage.aspx" />
+    <Content Include="View\Admin\AdminPage.aspx" />
+    <Content Include="View\Customer\CustomerPage.aspx" />
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\LoginPage.aspx" />
     <Content Include="View\RegisterPage.aspx" />
-    <Content Include="View\Style\Style.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -133,18 +131,18 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\RAisoRepository.cs" />
-    <Compile Include="View\AdminPage.aspx.cs">
+    <Compile Include="View\Admin\AdminPage.aspx.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\AdminPage.aspx.designer.cs">
+    <Compile Include="View\Admin\AdminPage.aspx.designer.cs">
       <DependentUpon>AdminPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="View\CustomerPage.aspx.cs">
+    <Compile Include="View\Customer\CustomerPage.aspx.cs">
       <DependentUpon>CustomerPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="View\CustomerPage.aspx.designer.cs">
+    <Compile Include="View\Customer\CustomerPage.aspx.designer.cs">
       <DependentUpon>CustomerPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\HomePage.aspx.cs">

@@ -41,7 +41,7 @@ namespace Raiso.View
                 age = DateTime.Now.Year - dob.Year;
                 if (dob > DateTime.Now.AddYears(-age)) age--;
             }
-            return (age >= 1) ? true : false;
+            return (age >= 1);
         }
 
         protected void RegisterButton_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace Raiso.View
             DateTime dob;
             string gender = radiobtnGender.SelectedValue;
             string address = txtAddress.Text;
+            string phone = txtPhone.Text;
 
             if (!ValidateDOB(dobInput))
             {
@@ -65,7 +66,7 @@ namespace Raiso.View
             }
 
             RAisoRepository newUser = new RAisoRepository();
-            newUser.create(username, password, dob, gender, address);
+            newUser.create(username, password, dob, gender, address, phone);
 
             Response.Redirect("HomePage.aspx");
         }

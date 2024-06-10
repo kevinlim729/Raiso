@@ -26,25 +26,27 @@ namespace Raiso.View
 
             if (isAuthenticated)
             {
-                HttpCookie cookie;
+                HttpCookie userRoleCookie;
+                string pageRedirect = "~/";
 
                 bool isAdmin = checkAdmin(username);
-                string pageRedirect = "~/";
 
                 if (isAdmin)
                 {
-                    cookie = new HttpCookie("admin");
-                    pageRedirect += "View/AdminPage.aspx";
+                    userRoleCookie = new HttpCookie("UserRoleCookie");
+                    userRoleCookie["Role"] = "admin";
+                    pageRedirect += "Admin/AdminPage.aspx";
                 }
                 else
                 {
-                    cookie = new HttpCookie("customer");
-                    pageRedirect += "View/CustomerPage.aspx";
+                    userRoleCookie = new HttpCookie("UserRoleCookie");
+                    userRoleCookie["Role"] = "customer";
+                    pageRedirect += "Customer/CustomerPage.aspx";
                 }
 
-                cookie.Expires = DateTime.Now.AddHours(12);
-                cookie["Username"] = username;
-                Response.Cookies.Add(cookie);
+                userRoleCookie.Expires = DateTime.Now.AddHours(12);
+                userRoleCookie["Username"] = username;
+                Response.Cookies.Add(userRoleCookie);
 
                 Response.Redirect(pageRedirect);
             }
@@ -55,11 +57,12 @@ namespace Raiso.View
             }
         }
 
+
         private bool checkAdmin(string username)
         {
             RAisoRepository repo = new RAisoRepository();
             string isAdmin = repo.getUserRolebyUserName(username);
-            return (isAdmin == "admin") ? false : true;
+            return (isAdmin == "admin");
         }
 
         private bool AuthenticateUser(string username, string password)

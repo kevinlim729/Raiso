@@ -12,7 +12,7 @@ namespace Raiso.Factory
     public class RAisoFactory
     {
         public static MsUser Create(
-            string username, string password, DateTime dob, string gender, string address
+            string username, string password, DateTime dob, string gender, string address, string phone
             )
         {
             RAisoRepository repo = new RAisoRepository();
@@ -24,6 +24,8 @@ namespace Raiso.Factory
             user.UserDOB = dob;
             user.UserGender = gender;
             user.UserAddress = address;
+            user.UserPhone = phone;
+            user.UserRole = "customer";
 
             return user;
         }
