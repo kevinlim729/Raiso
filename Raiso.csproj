@@ -90,6 +90,7 @@
       <LastGenOutput>RAisoDatabaseEntity.cs</LastGenOutput>
     </Content>
     <Content Include="View\Admin\AdminPage.aspx" />
+    <Content Include="View\Asset\logo.png" />
     <Content Include="View\Customer\CustomerPage.aspx" />
     <Content Include="View\HomePage.aspx" />
     <Content Include="View\LoginPage.aspx" />

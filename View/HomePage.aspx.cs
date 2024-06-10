@@ -26,10 +26,10 @@ namespace Raiso.View
             if(cookie == null)
             {
                 // Generate the navigation bar HTML
-                string navBarHtml = "<ul>";
-                navBarHtml += "<li><a href='HomePage.aspx'>Home</a></li>";
-                navBarHtml += "<li><a href='LoginPage.aspx'>Login</a></li>";
-                navBarHtml += "<li><a href='RegisterPage.aspx'>Register</a></li>";
+                string navBarHtml = "<ul class=\"list-group list-group-horizontal\">";
+                navBarHtml += "<li class=\"list-group-item bg-dark\"><a class=\"text-light\" href='HomePage.aspx'>Home</a></li>";
+                navBarHtml += "<li class=\"list-group-item bg-dark\"><a class=\"text-light\" href='LoginPage.aspx'>Login</a></li>";
+                navBarHtml += "<li class=\"list-group-item bg-dark\"><a class=\"text-light\" href='RegisterPage.aspx'>Register</a></li>";
                 navBarHtml += "</ul>";
 
                 // Add the navigation bar HTML to the placeholder
